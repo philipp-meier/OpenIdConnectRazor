@@ -18,4 +18,4 @@ The user will be redirected to the `Privacy` page again, once he is authenticate
 Ensure that your Keycloak client uses the `openid-connect` protocol and the access type is set to `confidential`.  
 To test this locally, your configured root URL should be https://localhost:7298/ and the "valid redirect URIs" should be the following:
 - http://localhost:5211/*
-- http://localhost:5211/*
+- https://localhost:7298/*
