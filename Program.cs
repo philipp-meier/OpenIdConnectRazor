@@ -6,7 +6,14 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages()
     .AddRazorPagesOptions(options => {
+        // To secure all pages.
+        // options.Conventions.AuthorizeFolder("/");
+        
+        // To only secure a specific page.
         options.Conventions.AuthorizePage("/Privacy");
+
+        // To allow access without log in to a specific page.
+        // options.Conventions.AllowAnonymousToPage("/Privacy");
     });
 
 builder.Services.AddAuthentication(options => {
